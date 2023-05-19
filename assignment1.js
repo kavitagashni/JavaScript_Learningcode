@@ -5,37 +5,37 @@
 // if string contains vowel in middle ->mkesh -> eshmkay , mukesh -> ukeshmay (text-after-vowel(including first vowel) + text-before-firstvowel + ay)
 
 
-// function findVowel(element) {
-//     const vowels = ["a", "e", "i", "o", "u"];
-//     if (vowels.includes(element[0])) {
-//         return `${element}ay`
-//     }
+function findVowel(element) {
+    const vowels = ["a", "e", "i", "o", "u"];
+    if (vowels.includes(element[0])) {
+        return `${element}ay`
+    }
 
-    // let isnoVowel = true;
+    let isnoVowel = true;
 
-    // for (let c of element) {
-    //     if (vowels.includes(c)) {
-    //         isnoVowel = false;
-    //         break;
-    //     }
-    // }
-    // if (isnoVowel) {
-    //     return `${element}way`
-    // }
+    for (let c of element) {
+        if (vowels.includes(c)) {
+            isnoVowel = false;
+            break;
+        }
+    }
+    if (isnoVowel) {
+        return `${element}way`
+    }
 
-    // let str = "";
+    let str = "";
 
-    // for (const c of element) {
-    //     if (vowels.includes(c)) {
-    //         break;
-    //     } else {
-    //         str += c;
-    //     }
-    // }
-    // return `${element.replace(str, '')}${str}ay`;
-// }
+    for (const c of element) {
+        if (vowels.includes(c)) {
+            break;
+        } else {
+            str += c;
+        }
+    }
+    return `${element.replace(str, '')}${str}ay`;
+}
 
-// console.log(findVowel("adyt"));
-// console.log(findVowel("rmsatzl"));
-// console.log(findVowel("ddadiyta"));
-// console.log(findVowel("zzbbcc"))
+console.log(findVowel("adyt"));
+console.log(findVowel("rmsatzl"));
+console.log(findVowel("ddadiyta"));
+console.log(findVowel("zzbbcc"))
